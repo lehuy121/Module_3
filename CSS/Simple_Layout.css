@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+#main {
+    max-width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;;
+}
+
+#head {
+    border: 1px solid;
+    background-color: #F1F1F1;
+    text-align: center;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+#head-link {
+    border: 1px solid;
+    background-color: lightsteelblue;
+}
+
+#logo, #banner h4 {
+    padding-top: 30px;
+}
+#logo, #banner{
+    height: 78px;
+}
+#logo {
+    width: 25%;
+    background-color: aquamarine;
+    float: left;
+}
+
+#banner {
+    width: 75%;
+    background-color: aqua;
+    float: left;
+}
+
+#head-link {
+    width: 100%;
+    height: 30px;
+}
+
+#link-menu {
+    padding-top: 5px;
+    width: 75%;
+    float: left;
+}
+
+#search {
+    padding-top: 5px;
+    float: right;
+    width: 25%;
+    position: relative;
+    text-align: center;
+}
+
+.search input {
+    text-indent: 30px;
+    font-family: FontAwesome, sans-serif;
+}
+
+.search .fa-search {
+    position: absolute;
+    top: 28px;
+    left: 65%;
+    font-size: 15px;
+}
+#body{
+    margin-top: 10px;
+}
+#left{
+    border: 1px solid;
+    max-width: 19%;
+    float: left;
+    margin-right: 1%;
+}
+#center{
+    border: 1px solid;
+    max-width: 59%;
+    float: left;
+    margin-right: 1%;
+}
+#right{
+    border: 1px solid;
+    max-width: 20%;
+    float: left;
+}
+#footer{
+    margin-top: 10px;
+    border: 1px solid;
+}

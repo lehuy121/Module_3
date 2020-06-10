@@ -1,0 +1,64 @@
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.wrapper > * {
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%; /* flex-grow 1 and flex-basis=100%*/
+}
+
+.header {
+    background-color: tomato;
+    height: 80px;
+}
+
+.footer {
+    background-color: lightblue;
+    height: 80px;
+}
+
+.main {
+    text-align: left;
+    background-color: deepskyblue;
+    height: 300px;
+    font-size: 24px;
+}
+
+.left {
+    background-color: gold;
+}
+
+.right {
+    background-color: hotpink;
+}
+
+@media all and (min-width: 800px) {
+    .main {
+        flex: 3;
+    }
+
+    .left {
+        order: 1;
+    }
+    .main {
+        order: 2;
+        flex-grow: 1;
+    }
+
+    .right {
+        order: 3;
+    }
+
+    .footer {
+        order: 4;
+    }
+}
+
+@media all and (min-width: 600px) {
+    .aside {
+        flex: 1;
+    }
+}
