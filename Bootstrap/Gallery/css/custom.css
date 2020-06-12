@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+.navbar-custom {
+    background-color: #ffffff;
+    height: 54px;
+    /*margin-left: 3%;*/
+}
+
+.logo {
+    width: 108px;
+
+}
+
+.navbar-brand-custom {
+    /*width: 137px;*/
+    height: 54px;
+    /*margin: 1px 0 0;*/
+    padding-top: 8px;
+}
+
+.under-line:hover, .under-line:focus {
+    border-bottom: 2px solid currentColor;
+    text-decoration-color: #262626;
+}
+/*---------sub nav---------*/
+.navbar-nav-custom li:hover > ul.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+}
+/*---------sub nav---------*/
+.bg-img {
+    height: 504px;
+    background-image: url('../images/Surface_Home_Hero_WFH_sandstone_May_20_V2.jpg');
+    background-size: 100% 100%;
+}
+.banner{
+    padding-top: 10%;
+}
