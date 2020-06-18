@@ -1,7 +1,6 @@
 interface Repo {
     name: string
     html_url: string
-    // created_at: string
 }
 
 let url_api: string = 'https://api.github.com/search/repositories?q=';
