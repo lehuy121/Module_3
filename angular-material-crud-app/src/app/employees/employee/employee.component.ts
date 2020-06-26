@@ -13,7 +13,7 @@ import {MatDialogRef} from '@angular/material/dialog';
 export class EmployeeComponent implements OnInit {
   @ViewChild(FormGroupDirective) formGroupDirective: FormGroupDirective;
 
-  constructor(private employeeService: EmployeeService,
+  constructor(public employeeService: EmployeeService,
               public departmentService: DepartmentService,
               private notificationService: NotificationService,
               public matDialogRef: MatDialogRef<EmployeeComponent>

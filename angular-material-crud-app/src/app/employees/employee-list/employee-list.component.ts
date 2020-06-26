@@ -64,6 +64,7 @@ export class EmployeeListComponent implements OnInit {
   }
 
   onEdit(row) {
+    console.log(row);
     this.employeeService.editForm(row);
     this.configMatDialog();
   }

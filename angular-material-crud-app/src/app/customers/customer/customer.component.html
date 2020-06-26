@@ -1,0 +1,64 @@
+<mat-toolbar>
+  <span>{{customerService.customerForm.controls['id'].value ? "Edit Customer" : "Create Customer"}}</span>
+  <span class="fill-remaining-space"></span>
+  <button class="btn-dialog-close" mat-stroked-button tabindex="-1" (click)="onCloseDialog()">
+    <mat-icon>clear</mat-icon>
+  </button>
+</mat-toolbar>
+<form class="normal-form" [formGroup]="customerService.customerForm" (ngSubmit)="onClear()">
+  <mat-grid-list cols="2" rowHeight="300px">
+    <mat-grid-tile>
+      <div class="controles-container">
+        <input type="hidden" formControlName="id">
+        <mat-form-field>
+          <input type="text" formControlName="fullName" matInput placeholder="Full Name*">
+          <mat-error *ngIf="customerService.customerForm.controls.fullName.errors?.required">
+            This filed is required.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input type="text" formControlName="identityCard" matInput placeholder="Identity Card">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input type="text" formControlName="phone" matInput placeholder="Phone*">
+<!--          <mat-error *ngIf="customerForm().controls.mobile.errors?.required">This filed is required.</mat-error>-->
+<!--          <mat-error *ngIf="customerForm().controls.mobile.errors?.minlength">Minimum 8 characters needed</mat-error>-->
+        </mat-form-field>
+
+        <mat-form-field>
+          <input type="text" formControlName="address" matInput placeholder="Address">
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="controles-container">
+        <mat-form-field>
+          <mat-select formControlName="customerType" placeholder="Customer Type">
+<!--            <ng-container *ngFor="let customerType of customerTypeService.arrayCustomerType">-->
+<!--              <mat-option value="{{customerType.id}}">{{customerType.name}}</mat-option>-->
+<!--            </ng-container>-->
+            <ng-container>
+              <mat-option value="Diamond">Diamond</mat-option>
+              <mat-option value="Platinium">Platinium</mat-option>
+              <mat-option value="Gold">Gold</mat-option>
+              <mat-option value="Silver">Silver</mat-option>
+              <mat-option value="Member">Member</mat-option>
+            </ng-container>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="text" formControlName="dayOfBirth" matInput [matDatepicker]="picker" placeholder="Day Of Birth">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <div class="button-row">
+          <button mat-raised-button color="primary" type="submit" [disabled]="customerService.customerForm.invalid" (click)="onSubmit()">Submit</button>
+<!--          <button mat-raised-button color="primary" type="submit" (click)="onSubmit()">Submit</button>-->
+          <button mat-raised-button color="warn" type="submit" >Clear</button>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</form>

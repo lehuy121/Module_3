@@ -18,6 +18,10 @@ import {environment} from '../environments/environment';
 import {DepartmentService} from './shared/department.service';
 import {EmployeeListComponent} from './employees/employee-list/employee-list.component';
 import {MatConfirmDialogComponent} from './mat-confirm-dialog/mat-confirm-dialog.component';
+import { CustomersComponent } from './customers/customers.component';
+import { CustomerComponent } from './customers/customer/customer.component';
+import { CustomerListComponent } from './customers/customer-list/customer-list.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,10 @@ import {MatConfirmDialogComponent} from './mat-confirm-dialog/mat-confirm-dialog
     EmployeesComponent,
     EmployeeComponent,
     EmployeeListComponent,
-    MatConfirmDialogComponent
+    MatConfirmDialogComponent,
+    CustomersComponent,
+    CustomerComponent,
+    CustomerListComponent
   ],
   imports: [
     BrowserModule,
@@ -35,11 +42,12 @@ import {MatConfirmDialogComponent} from './mat-confirm-dialog/mat-confirm-dialog
     BrowserAnimationsModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [EmployeeService, DatePipe, DepartmentService],
   bootstrap: [AppComponent],
-  entryComponents: [EmployeeComponent, MatConfirmDialogComponent]
+  entryComponents: [EmployeeComponent, MatConfirmDialogComponent, CustomerComponent]
 })
 export class AppModule {
 }

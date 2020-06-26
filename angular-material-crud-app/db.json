@@ -1,0 +1,74 @@
+{
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinium"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "customer": [
+    {
+      "id": 1,
+      "fullName": "Edit1",
+      "identityCard": "111",
+      "phone": "111",
+      "address": "11",
+      "customerType": "Platinium",
+      "dayOfBirth": "2020-06-19T17:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "fullName": "Hoang",
+      "identityCard": "727272727",
+      "phone": "0985898888",
+      "address": "viet nam",
+      "customerType": "Platinium",
+      "dayOfBirth": "2020-06-18T17:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "fullName": "New",
+      "identityCard": "666",
+      "phone": "666",
+      "address": "adwad",
+      "customerType": "Platinium",
+      "dayOfBirth": "2020-06-15T17:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "fullName": "edit",
+      "identityCard": "8888",
+      "phone": "88",
+      "address": "888",
+      "customerType": "Platinium",
+      "dayOfBirth": "2020-06-26T17:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "fullName": "55555",
+      "identityCard": "55555",
+      "phone": "555",
+      "address": "55555",
+      "customerType": "Platinium",
+      "dayOfBirth": "2020-06-18T17:00:00.000Z"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
